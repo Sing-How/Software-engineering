@@ -1,25 +1,14 @@
-/*
- * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+//read by 曾梦媛
 
 package net.micode.notes.data;
 
 import android.net.Uri;
 public class Notes {
+    //以下是Notes类中定义的常量
     public static final String AUTHORITY = "micode_notes";
     public static final String TAG = "Notes";
+    
+    //以下三个TYPE常量用于设置NoteColumns.TYPE的值
     public static final int TYPE_NOTE     = 0;
     public static final int TYPE_FOLDER   = 1;
     public static final int TYPE_SYSTEM   = 2;
@@ -30,10 +19,10 @@ public class Notes {
      * {@link Notes#ID_TEMPARAY_FOLDER } is for notes belonging no folder
      * {@link Notes#ID_CALL_RECORD_FOLDER} is to store call records
      */
-    public static final int ID_ROOT_FOLDER = 0;
-    public static final int ID_TEMPARAY_FOLDER = -1;
-    public static final int ID_CALL_RECORD_FOLDER = -2;
-    public static final int ID_TRASH_FOLER = -3;
+    public static final int ID_ROOT_FOLDER = 0;//系统文件夹标识符
+    public static final int ID_TEMPARAY_FOLDER = -1;//默认文件夹标识符
+    public static final int ID_CALL_RECORD_FOLDER = -2;//用于保存通话记录的文件夹标识符
+    public static final int ID_TRASH_FOLER = -3;//垃圾文件夹标识符
 
     public static final String INTENT_EXTRA_ALERT_DATE = "net.micode.notes.alert_date";
     public static final String INTENT_EXTRA_BACKGROUND_ID = "net.micode.notes.background_color_id";
@@ -47,6 +36,7 @@ public class Notes {
     public static final int TYPE_WIDGET_4X            = 1;
 
     public static class DataConstants {
+        //数据常量
         public static final String NOTE = TextNote.CONTENT_ITEM_TYPE;
         public static final String CALL_NOTE = CallNote.CONTENT_ITEM_TYPE;
     }
@@ -54,13 +44,16 @@ public class Notes {
     /**
      * Uri to query all notes and folders
      */
+    //查询便签和文件夹的指针
     public static final Uri CONTENT_NOTE_URI = Uri.parse("content://" + AUTHORITY + "/note");
 
     /**
      * Uri to query data
      */
+    //查找数据的指针
     public static final Uri CONTENT_DATA_URI = Uri.parse("content://" + AUTHORITY + "/data");
 
+    //定义NoteColumns类中的常量,这些常量主要定义的是便签的属性，用于后面创建数据库的表头
     public interface NoteColumns {
         /**
          * The unique ID for a row
@@ -167,6 +160,7 @@ public class Notes {
         public static final String VERSION = "version";
     }
 
+    // 定义DataColumns类中的常量,这些常量主要定义的是存储便签内容数据，用于后面创建数据库的表头
     public interface DataColumns {
         /**
          * The unique ID for a row
@@ -240,7 +234,8 @@ public class Notes {
          */
         public static final String DATA5 = "data5";
     }
-
+    
+    //文本内容的数据结构
     public static final class TextNote implements DataColumns {
         /**
          * Mode to indicate the text in check list mode or not
@@ -256,7 +251,8 @@ public class Notes {
 
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/text_note");
     }
-
+    
+    //电话记录的数据结构
     public static final class CallNote implements DataColumns {
         /**
          * Call date for this record
