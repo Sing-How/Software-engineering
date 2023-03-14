@@ -1,18 +1,4 @@
-/*
- * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+//  Read By 孙明宇
 
 package net.micode.notes.gtask.data;
 
@@ -39,10 +25,12 @@ import java.util.ArrayList;
 
 
 public class SqlNote {
+    //  将得到的类的简称放入TAG中
     private static final String TAG = SqlNote.class.getSimpleName();
 
     private static final int INVALID_ID = -99999;
 
+    //  集合了全部17个变量
     public static final String[] PROJECTION_NOTE = new String[] {
             NoteColumns.ID, NoteColumns.ALERTED_DATE, NoteColumns.BG_COLOR_ID,
             NoteColumns.CREATED_DATE, NoteColumns.HAS_ATTACHMENT, NoteColumns.MODIFIED_DATE,
@@ -52,6 +40,7 @@ public class SqlNote {
             NoteColumns.VERSION
     };
 
+    //  设置17个列的编号
     public static final int ID_COLUMN = 0;
 
     public static final int ALERTED_DATE_COLUMN = 1;
@@ -122,16 +111,17 @@ public class SqlNote {
 
     private ArrayList<SqlData> mDataList;
 
+    //  类似默认构造函数，利用context里的内容实现初始构造函数
     public SqlNote(Context context) {
         mContext = context;
         mContentResolver = context.getContentResolver();
-        mIsCreate = true;
+        mIsCreate = true;               //  记录构造方法
         mId = INVALID_ID;
         mAlertDate = 0;
         mBgColorId = ResourceParser.getDefaultBgId(context);
-        mCreatedDate = System.currentTimeMillis();
+        mCreatedDate = System.currentTimeMillis();  //当前系统时间为创建时间
         mHasAttachment = 0;
-        mModifiedDate = System.currentTimeMillis();
+        mModifiedDate = System.currentTimeMillis(); //当前系统时间为最后修改时间
         mParentId = 0;
         mSnippet = "";
         mType = Notes.TYPE_NOTE;
@@ -143,6 +133,7 @@ public class SqlNote {
         mDataList = new ArrayList<SqlData>();
     }
 
+    //  利用游标来实现构造函数
     public SqlNote(Context context, Cursor c) {
         mContext = context;
         mContentResolver = context.getContentResolver();
@@ -154,6 +145,7 @@ public class SqlNote {
         mDiffNoteValues = new ContentValues();
     }
 
+    //  利用id来进行实现构造函数
     public SqlNote(Context context, long id) {
         mContext = context;
         mContentResolver = context.getContentResolver();
@@ -166,6 +158,7 @@ public class SqlNote {
 
     }
 
+    //  通过id从光标处加载数据
     private void loadFromCursor(long id) {
         Cursor c = null;
         try {
@@ -185,6 +178,7 @@ public class SqlNote {
         }
     }
 
+    //  从当前光标的游标c处获取内容，加载数据
     private void loadFromCursor(Cursor c) {
         mId = c.getLong(ID_COLUMN);
         mAlertDate = c.getLong(ALERTED_DATE_COLUMN);
@@ -200,6 +194,7 @@ public class SqlNote {
         mVersion = c.getLong(VERSION_COLUMN);
     }
 
+    //  获取当前数据，加载到数据库中当前游标处
     private void loadDataContent() {
         Cursor c = null;
         mDataList.clear();
@@ -226,6 +221,7 @@ public class SqlNote {
         }
     }
 
+    //  利用json对象来设置数据内容
     public boolean setContent(JSONObject js) {
         try {
             JSONObject note = js.getJSONObject(GTaskStringUtils.META_HEAD_NOTE);
@@ -359,6 +355,7 @@ public class SqlNote {
         return true;
     }
 
+    // 获取数据内容并加载到note中
     public JSONObject getContent() {
         try {
             JSONObject js = new JSONObject();
@@ -407,39 +404,48 @@ public class SqlNote {
         return null;
     }
 
+    //  给当前id设置父id
     public void setParentId(long id) {
         mParentId = id;
         mDiffNoteValues.put(NoteColumns.PARENT_ID, id);
     }
 
+    //  给当前gid设置Gtaskid
     public void setGtaskId(String gid) {
         mDiffNoteValues.put(NoteColumns.GTASK_ID, gid);
     }
 
+    //  给当前id设置同步id
     public void setSyncId(long syncId) {
         mDiffNoteValues.put(NoteColumns.SYNC_ID, syncId);
     }
 
+    //  重置本地所有修改
     public void resetLocalModified() {
         mDiffNoteValues.put(NoteColumns.LOCAL_MODIFIED, 0);
     }
 
+    //  获取当前id
     public long getId() {
         return mId;
     }
 
+    //  获取当前父id
     public long getParentId() {
         return mParentId;
     }
 
+    //  获取小片段
     public String getSnippet() {
         return mSnippet;
     }
 
+    //  判断是否是note类型
     public boolean isNoteType() {
         return mType == Notes.TYPE_NOTE;
     }
 
+    //  将当前的修改保存到数据库中
     public void commit(boolean validateVersion) {
         if (mIsCreate) {
             if (mId == INVALID_ID && mDiffNoteValues.containsKey(NoteColumns.ID)) {
@@ -459,7 +465,7 @@ public class SqlNote {
 
             if (mType == Notes.TYPE_NOTE) {
                 for (SqlData sqlData : mDataList) {
-                    sqlData.commit(mId, false, -1);
+                    sqlData.commit(mId, false, -1); //  直接使用sqldata中的实现方式
                 }
             }
         } else {

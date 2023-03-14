@@ -1,18 +1,4 @@
-/*
- * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+//  Read By 孙明宇
 
 package net.micode.notes.gtask.data;
 
@@ -33,18 +19,19 @@ import org.json.JSONObject;
 
 
 public class Task extends Node {
-    private static final String TAG = Task.class.getSimpleName();
+    private static final String TAG = Task.class.getSimpleName();  // tag存放当前类的简称
 
-    private boolean mCompleted;
+    private boolean mCompleted; //  是否已完成
 
-    private String mNotes;
+    private String mNotes;      //  note对象
 
-    private JSONObject mMetaInfo;
+    private JSONObject mMetaInfo;  //  元数据信息
 
-    private Task mPriorSibling;
+    private Task mPriorSibling; //  优先兄弟指针
 
-    private TaskList mParent;
+    private TaskList mParent;   //  父指针即所在任务列表指针
 
+    //  初始化默认构造函数
     public Task() {
         super();
         mCompleted = false;
@@ -54,6 +41,7 @@ public class Task extends Node {
         mMetaInfo = null;
     }
 
+    //  返回保存当前actionId所有内容对应的新建的json对象
     public JSONObject getCreateAction(int actionId) {
         JSONObject js = new JSONObject();
 
@@ -103,6 +91,7 @@ public class Task extends Node {
         return js;
     }
 
+    //  返回当前根据actionId更新的json对象
     public JSONObject getUpdateAction(int actionId) {
         JSONObject js = new JSONObject();
 
@@ -135,6 +124,7 @@ public class Task extends Node {
         return js;
     }
 
+    //  通过远程的json对象来设置数据内容
     public void setContentByRemoteJSON(JSONObject js) {
         if (js != null) {
             try {
@@ -175,6 +165,7 @@ public class Task extends Node {
         }
     }
 
+    //  通过本地json对象来设置数据内容
     public void setContentByLocalJSON(JSONObject js) {
         if (js == null || !js.has(GTaskStringUtils.META_HEAD_NOTE)
                 || !js.has(GTaskStringUtils.META_HEAD_DATA)) {
@@ -204,6 +195,7 @@ public class Task extends Node {
         }
     }
 
+    //  通过当前数据内容来获取对应的本地json对象
     public JSONObject getLocalJSONFromContent() {
         String name = getName();
         try {
@@ -247,6 +239,7 @@ public class Task extends Node {
         }
     }
 
+    //  根据元数据设置当前元信息
     public void setMetaInfo(MetaData metaData) {
         if (metaData != null && metaData.getNotes() != null) {
             try {
@@ -258,6 +251,7 @@ public class Task extends Node {
         }
     }
 
+    // 根据游标c来获取同步动作，并返回同步方式
     public int getSyncAction(Cursor c) {
         try {
             JSONObject noteInfo = null;
@@ -311,39 +305,48 @@ public class Task extends Node {
         return SYNC_ACTION_ERROR;
     }
 
+    //  判断当前数据是否值得保存（即若各项信息有一项有效，即值得保存）
     public boolean isWorthSaving() {
         return mMetaInfo != null || (getName() != null && getName().trim().length() > 0)
                 || (getNotes() != null && getNotes().trim().length() > 0);
     }
 
+    //  设置当前状态是否完成
     public void setCompleted(boolean completed) {
         this.mCompleted = completed;
     }
 
+    //  设置note数据
     public void setNotes(String notes) {
         this.mNotes = notes;
     }
 
+    //  设置优先兄弟指针
     public void setPriorSibling(Task priorSibling) {
         this.mPriorSibling = priorSibling;
     }
 
+    //  设置父指针（所在任务列表指针）
     public void setParent(TaskList parent) {
         this.mParent = parent;
     }
 
+    //  获取当前是否完成这一状态
     public boolean getCompleted() {
         return this.mCompleted;
     }
 
+    //  获取当前note数据
     public String getNotes() {
         return this.mNotes;
     }
 
+    //  获取当前优先兄弟指针
     public Task getPriorSibling() {
         return this.mPriorSibling;
     }
 
+    //  获取当前所在任务列表指针
     public TaskList getParent() {
         return this.mParent;
     }
