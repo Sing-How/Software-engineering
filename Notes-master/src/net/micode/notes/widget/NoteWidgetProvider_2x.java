@@ -1,3 +1,5 @@
+// read by 皮亚杰
+
 /*
  * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
  *
@@ -26,22 +28,22 @@ import net.micode.notes.tool.ResourceParser;
 
 public class NoteWidgetProvider_2x extends NoteWidgetProvider {
     @Override
-    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {  // 产生更新时调用父类中的update函数
         super.update(context, appWidgetManager, appWidgetIds);
     }
 
     @Override
-    protected int getLayoutId() {
+    protected int getLayoutId() {               // 获取布局ID
         return R.layout.widget_2x;
     }
 
     @Override
-    protected int getBgResourceId(int bgId) {
+    protected int getBgResourceId(int bgId) {   // 获取北京ID
         return ResourceParser.WidgetBgResources.getWidget2xBgResource(bgId);
     }
 
     @Override
-    protected int getWidgetType() {
+    protected int getWidgetType() {             // 获取组件类型
         return Notes.TYPE_WIDGET_2X;
     }
 }

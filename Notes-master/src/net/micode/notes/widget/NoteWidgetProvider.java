@@ -1,3 +1,5 @@
+// read by 皮亚杰
+
 /*
  * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
  *
@@ -32,11 +34,12 @@ import net.micode.notes.tool.ResourceParser;
 import net.micode.notes.ui.NoteEditActivity;
 import net.micode.notes.ui.NotesListActivity;
 
+// 桌面组件父类，用于实现桌面组件功能
 public abstract class NoteWidgetProvider extends AppWidgetProvider {
     public static final String [] PROJECTION = new String [] {
-        NoteColumns.ID,
-        NoteColumns.BG_COLOR_ID,
-        NoteColumns.SNIPPET
+        NoteColumns.ID,             // 便签ID
+        NoteColumns.BG_COLOR_ID,    // 便签对应的背景颜色
+        NoteColumns.SNIPPET         // 标签内容
     };
 
     public static final int COLUMN_ID           = 0;
@@ -46,7 +49,7 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
     private static final String TAG = "NoteWidgetProvider";
 
     @Override
-    public void onDeleted(Context context, int[] appWidgetIds) {
+    public void onDeleted(Context context, int[] appWidgetIds) {                    // 删除小组件
         ContentValues values = new ContentValues();
         values.put(NoteColumns.WIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
         for (int i = 0; i < appWidgetIds.length; i++) {
@@ -57,7 +60,7 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
         }
     }
 
-    private Cursor getNoteWidgetInfo(Context context, int widgetId) {
+    private Cursor getNoteWidgetInfo(Context context, int widgetId) {               // 获取组件信息
         return context.getContentResolver().query(Notes.CONTENT_NOTE_URI,
                 PROJECTION,
                 NoteColumns.WIDGET_ID + "=? AND " + NoteColumns.PARENT_ID + "<>?",
@@ -71,8 +74,8 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
 
     private void update(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds,
             boolean privacyMode) {
-        for (int i = 0; i < appWidgetIds.length; i++) {
-            if (appWidgetIds[i] != AppWidgetManager.INVALID_APPWIDGET_ID) {
+        for (int i = 0; i < appWidgetIds.length; i++) {                             // 获取便签ID
+            if (appWidgetIds[i] != AppWidgetManager.INVALID_APPWIDGET_ID) {         // 当前便签ID有效
                 int bgId = ResourceParser.getDefaultBgId(context);
                 String snippet = "";
                 Intent intent = new Intent(context, NoteEditActivity.class);
@@ -103,7 +106,7 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
                 RemoteViews rv = new RemoteViews(context.getPackageName(), getLayoutId());
                 rv.setImageViewResource(R.id.widget_bg_image, getBgResourceId(bgId));
                 intent.putExtra(Notes.INTENT_EXTRA_BACKGROUND_ID, bgId);
-                /**
+                /*
                  * Generate the pending intent to start host for the widget
                  */
                 PendingIntent pendingIntent = null;
