@@ -41,17 +41,17 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
         NoteColumns.BG_COLOR_ID,    // 便签对应的背景颜色
         NoteColumns.SNIPPET         // 标签内容
     };
-
+    // 用作获取对应内容的标识符
     public static final int COLUMN_ID           = 0;
     public static final int COLUMN_BG_COLOR_ID  = 1;
     public static final int COLUMN_SNIPPET      = 2;
-
+    // 用于输出调试信息
     private static final String TAG = "NoteWidgetProvider";
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {                    // 删除小组件
         ContentValues values = new ContentValues();
-        values.put(NoteColumns.WIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
+        values.put(NoteColumns.WIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);   // 获取对应组件
         for (int i = 0; i < appWidgetIds.length; i++) {
             context.getContentResolver().update(Notes.CONTENT_NOTE_URI,
                     values,
@@ -84,8 +84,8 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
                 intent.putExtra(Notes.INTENT_EXTRA_WIDGET_TYPE, getWidgetType());
 
                 Cursor c = getNoteWidgetInfo(context, appWidgetIds[i]);
-                if (c != null && c.moveToFirst()) {
-                    if (c.getCount() > 1) {
+                if (c != null && c.moveToFirst()) {                                 // 组件中包含信息
+                    if (c.getCount() > 1) {                                         // 错误处理
                         Log.e(TAG, "Multiple message with same widget id:" + appWidgetIds[i]);
                         c.close();
                         return;
@@ -103,8 +103,8 @@ public abstract class NoteWidgetProvider extends AppWidgetProvider {
                     c.close();
                 }
 
-                RemoteViews rv = new RemoteViews(context.getPackageName(), getLayoutId());
-                rv.setImageViewResource(R.id.widget_bg_image, getBgResourceId(bgId));
+                RemoteViews rv = new RemoteViews(context.getPackageName(), getLayoutId());  // 获取组件以修改信息
+                rv.setImageViewResource(R.id.widget_bg_image, getBgResourceId(bgId));       // 更新小组件图像
                 intent.putExtra(Notes.INTENT_EXTRA_BACKGROUND_ID, bgId);
                 /*
                  * Generate the pending intent to start host for the widget
