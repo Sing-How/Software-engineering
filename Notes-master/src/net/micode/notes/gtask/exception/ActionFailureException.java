@@ -1,28 +1,18 @@
-/*
- * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+//read by 曾梦媛
+//处理小米便签运行过程中的运行异常
 package net.micode.notes.gtask.exception;
 
 public class ActionFailureException extends RuntimeException {
+    //serialVersionUID相当于java类的身份证。主要用于版本控制
+    //serialVersionUID作用是序列化时保持版本的兼容性，即在版本升级时反序列化仍保持对象的唯一性
     private static final long serialVersionUID = 4425249765923293627L;
 
     public ActionFailureException() {
         super();
     }
-
+    //在JAVA类中使用super来引用父类的成分，用this来引用当前对象
+    //用super来引用父类对象
+    //即此处super()以及super (paramString)可认为是RuntimeException ()和RuntimeException (paramString)
     public ActionFailureException(String paramString) {
         super(paramString);
     }
