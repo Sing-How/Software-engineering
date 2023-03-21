@@ -1,19 +1,4 @@
-/*
- * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+//  Read By 孙明宇
 package net.micode.notes.gtask.data;
 
 import android.database.Cursor;
@@ -33,8 +18,10 @@ import java.util.ArrayList;
 public class TaskList extends Node {
     private static final String TAG = TaskList.class.getSimpleName();
 
+    //  当前TaskList的指针
     private int mIndex;
 
+    //  以Task为元素的数组
     private ArrayList<Task> mChildren;
 
     public TaskList() {
@@ -43,6 +30,7 @@ public class TaskList extends Node {
         mIndex = 1;
     }
 
+    //  以actionId去创建一个action，并返回JSON对象
     public JSONObject getCreateAction(int actionId) {
         JSONObject js = new JSONObject();
 
@@ -74,6 +62,7 @@ public class TaskList extends Node {
         return js;
     }
 
+    //  以actionId去更新对应的action，并返回JSON对象
     public JSONObject getUpdateAction(int actionId) {
         JSONObject js = new JSONObject();
 
@@ -103,6 +92,7 @@ public class TaskList extends Node {
         return js;
     }
 
+    //  通过远程JSON对象去设置TaskList中对应对象中的内容
     public void setContentByRemoteJSON(JSONObject js) {
         if (js != null) {
             try {
@@ -129,6 +119,7 @@ public class TaskList extends Node {
         }
     }
 
+    //  通过远程JSON对象去设置TaskList中对应对象中的内容
     public void setContentByLocalJSON(JSONObject js) {
         if (js == null || !js.has(GTaskStringUtils.META_HEAD_NOTE)) {
             Log.w(TAG, "setContentByLocalJSON: nothing is avaiable");
@@ -157,6 +148,7 @@ public class TaskList extends Node {
         }
     }
 
+    //  通过存储的内容，返回对应的JSON对象
     public JSONObject getLocalJSONFromContent() {
         try {
             JSONObject js = new JSONObject();
@@ -183,6 +175,7 @@ public class TaskList extends Node {
         }
     }
 
+    //  通过光标去获取此时同步动作的类别
     public int getSyncAction(Cursor c) {
         try {
             if (c.getInt(SqlNote.LOCAL_MODIFIED_COLUMN) == 0) {
@@ -216,10 +209,12 @@ public class TaskList extends Node {
         return SYNC_ACTION_ERROR;
     }
 
+    //  获得TaskList的大小(mChildren的数量)
     public int getChildTaskCount() {
         return mChildren.size();
     }
 
+    //  增加一个新的Task到TaskList中，并返回是否添加成功
     public boolean addChildTask(Task task) {
         boolean ret = false;
         if (task != null && !mChildren.contains(task)) {
@@ -234,6 +229,7 @@ public class TaskList extends Node {
         return ret;
     }
 
+    //  增加一个新的Task到TaskList的制定index中，并返回是否添加成功
     public boolean addChildTask(Task task, int index) {
         if (index < 0 || index > mChildren.size()) {
             Log.e(TAG, "add child task: invalid index");
@@ -260,6 +256,7 @@ public class TaskList extends Node {
         return true;
     }
 
+    //  从TaskList中删除一个指定Task，并返回是否删除成功
     public boolean removeChildTask(Task task) {
         boolean ret = false;
         int index = mChildren.indexOf(task);
@@ -281,6 +278,7 @@ public class TaskList extends Node {
         return ret;
     }
 
+    //  把当前TaskList中一个Task移动到指定index的位置，并返回是否操作成功
     public boolean moveChildTask(Task task, int index) {
 
         if (index < 0 || index >= mChildren.size()) {
@@ -299,6 +297,7 @@ public class TaskList extends Node {
         return (removeChildTask(task) && addChildTask(task, index));
     }
 
+    //  通过gid去查找一个Task，并返回这个Task
     public Task findChildTaskByGid(String gid) {
         for (int i = 0; i < mChildren.size(); i++) {
             Task t = mChildren.get(i);
@@ -309,10 +308,12 @@ public class TaskList extends Node {
         return null;
     }
 
+    //  获取一个指定Task的index
     public int getChildTaskIndex(Task task) {
         return mChildren.indexOf(task);
     }
 
+    //  通过index去获取TaskList中的一个Task
     public Task getChildTaskByIndex(int index) {
         if (index < 0 || index >= mChildren.size()) {
             Log.e(TAG, "getTaskByIndex: invalid index");
@@ -321,6 +322,7 @@ public class TaskList extends Node {
         return mChildren.get(index);
     }
 
+    //  通过gid去获取TaskList中的一个Task
     public Task getChilTaskByGid(String gid) {
         for (Task task : mChildren) {
             if (task.getGid().equals(gid))
@@ -329,14 +331,17 @@ public class TaskList extends Node {
         return null;
     }
 
+    //  获取当前TaskList中的全部内容
     public ArrayList<Task> getChildTaskList() {
         return this.mChildren;
     }
 
+    //  设置当前任务的index
     public void setIndex(int index) {
         this.mIndex = index;
     }
 
+    //  获取当前任务的index
     public int getIndex() {
         return this.mIndex;
     }
