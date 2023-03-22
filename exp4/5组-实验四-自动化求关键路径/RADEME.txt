@@ -1,0 +1,3 @@
+KeyPath_src存储着源代码及组件
+KeyPath中的KeyPath.exe是自动化求关键路径的程序
+程序中的加载图是默认从D盘中寻找1.txt文件，以邻接矩阵形式读入图
