@@ -1,14 +1,13 @@
-//read by 宋璎航
 package net.micode.notes.ui;
- 
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
- 
+
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        intent.setClass(context, AlarmAlertActivity.class);  
+        intent.setClass(context, AlarmAlertActivity.class);
         //启动AlarmAlertActivity
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //activity要存在于activity的栈中，而非activity的途径启动activity时必然不存在一个activity的栈

@@ -1,19 +1,5 @@
-/*
- * Copyright (c) 2010-2011, The MiCode Open Source Community (www.micode.net)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+//read by 曾梦媛
+//Service是在一段不定的时间运行在后台，不和用户交互的应用组件
 package net.micode.notes.gtask.remote;
 
 import android.app.Activity;
@@ -42,6 +28,7 @@ public class GTaskSyncService extends Service {
 
     private static String mSyncProgress = "";
 
+    //启动一个同步工作
     private void startSync() {
         if (mSyncTask == null) {
             mSyncTask = new GTaskASyncTask(this, new GTaskASyncTask.OnCompleteListener() {
@@ -52,26 +39,31 @@ public class GTaskSyncService extends Service {
                 }
             });
             sendBroadcast("");
+            //让任务是以单线程队列方式或线程池队列方式运行
             mSyncTask.execute();
         }
     }
 
+    //取消同步
     private void cancelSync() {
         if (mSyncTask != null) {
             mSyncTask.cancelSync();
         }
     }
 
+    //初始化一个service
     @Override
     public void onCreate() {
         mSyncTask = null;
     }
 
+    //service生命周期的组成部分，相当于重启service（比如在被暂停之后），而不是创建一个新的service
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Bundle bundle = intent.getExtras();
         if (bundle != null && bundle.containsKey(ACTION_STRING_NAME)) {
             switch (bundle.getInt(ACTION_STRING_NAME, ACTION_INVALID)) {
+                //两种情况：开始同步 取消同步
                 case ACTION_START_SYNC:
                     startSync();
                     break;
@@ -81,11 +73,13 @@ public class GTaskSyncService extends Service {
                 default:
                     break;
             }
+            //等待新的intent来是这个service继续运行
             return START_STICKY;
         }
         return super.onStartCommand(intent, flags, startId);
     }
 
+    //在没有内存的情况下如果存在service则结束掉这的service
     @Override
     public void onLowMemory() {
         if (mSyncTask != null) {
@@ -97,14 +91,19 @@ public class GTaskSyncService extends Service {
         return null;
     }
 
+    //发送同步的相关通知
     public void sendBroadcast(String msg) {
         mSyncProgress = msg;
+        //创建一个新的Intent
         Intent intent = new Intent(GTASK_SERVICE_BROADCAST_NAME);
+        //附加INTENT中的相应参数的值
         intent.putExtra(GTASK_SERVICE_BROADCAST_IS_SYNCING, mSyncTask != null);
         intent.putExtra(GTASK_SERVICE_BROADCAST_PROGRESS_MSG, msg);
+        //发送这个通知
         sendBroadcast(intent);
     }
 
+    //执行一个service，service的内容里的同步动作就是开始同步
     public static void startSync(Activity activity) {
         GTaskManager.getInstance().setActivityContext(activity);
         Intent intent = new Intent(activity, GTaskSyncService.class);
@@ -112,16 +111,19 @@ public class GTaskSyncService extends Service {
         activity.startService(intent);
     }
 
+    //执行一个service，service的内容里的同步动作就是取消同步
     public static void cancelSync(Context context) {
         Intent intent = new Intent(context, GTaskSyncService.class);
         intent.putExtra(GTaskSyncService.ACTION_STRING_NAME, GTaskSyncService.ACTION_CANCEL_SYNC);
         context.startService(intent);
     }
 
+    //判读是否在进行同步
     public static boolean isSyncing() {
         return mSyncTask != null;
     }
 
+    //获取当前进度的信息
     public static String getProgressString() {
         return mSyncProgress;
     }
