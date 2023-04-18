@@ -1,0 +1,25 @@
+
+v
+java:S11927"[Define a constant instead of duplicating this literal " TEXT NOT NULL DEFAULT ''," 5 times.(ƒşŞ¿ùÿÿÿÿ
+c
+java:S1192]"HDefine a constant instead of duplicating this literal " BEGIN " 4 times.(ÕêïŠşÿÿÿÿ
+a
+java:S1192l"FDefine a constant instead of duplicating this literal "=old." 6 times.(”»ÎÔüÿÿÿÿ
+c
+java:S1192"GDefine a constant instead of duplicating this literal " BEGIN" 6 times.(ÕêïŠşÿÿÿÿ
+t
+java:S11920"^Define a constant instead of duplicating this literal " INTEGER NOT NULL DEFAULT 0," 12 times.(çÀœª
+_
+java:S1192`"IDefine a constant instead of duplicating this literal "  WHERE " 8 times.(Øë°
+\
+java:S1192`"FDefine a constant instead of duplicating this literal "=new." 6 times.(Øë°
+h
+java:S1192"RDefine a constant instead of duplicating this literal " AFTER DELETE ON " 3 times.(“áâB
+c
+java:S1192_"HDefine a constant instead of duplicating this literal "   SET " 8 times.(Õ÷Ë“üÿÿÿÿ
+`
+java:S1192^"JDefine a constant instead of duplicating this literal "  UPDATE " 8 times.(ìó¥Ä
+
+java:S11923"yDefine a constant instead of duplicating this literal " INTEGER NOT NULL DEFAULT (strftime('%s','now') * 1000)," 4 times.(˜›£·
+Y
+java:S1214#"CMove constants defined in this interfaces to another class or enum.(áÅÔö
