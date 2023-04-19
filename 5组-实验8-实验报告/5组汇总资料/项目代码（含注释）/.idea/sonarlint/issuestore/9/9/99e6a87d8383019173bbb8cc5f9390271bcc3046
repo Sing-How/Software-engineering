@@ -1,0 +1,113 @@
+
+_
+java:S1192/"IDefine a constant instead of duplicating this literal "password" 6 times.(ËúŠ©
+f	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…¦‹ˆ
+f	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ¯ô¸
+f	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şª±®
+k	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÙøÿÿÿÿ
+k	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬€˜Ùşÿÿÿÿ
+f	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÿ–
+k	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É½ùÿÿÿÿ
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Øª–øÿÿÿÿ
+k	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛüÙøÿÿÿÿ
+f	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„‡Åæ
+k	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üøùùÿÿÿÿ
+f	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û“Ö
+g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìĞÑ
+l	java:S117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä¯§•ÿÿÿÿÿ
+g	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Ş±‡
+g	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ƒ
+l	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÁÂÎÿÿÿÿÿ
+g	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÄ¤
+l	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ğÃğúÿÿÿÿ
+l	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Éöªıÿÿÿÿ
+g	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÅÊ’
+g	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§µ¥æ
+f	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ç¦S
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶×£°ûÿÿÿÿ
+l	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§€º»ùÿÿÿÿ
+l	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øë’ûÿÿÿÿ
+l	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùª‰İıÿÿÿÿ
+l	java:S117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÉÙ«ûÿÿÿÿ
+g	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¿ø¾
+l	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ò”ºùÿÿÿÿ
+l	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãû¬øÿÿÿÿ
+l	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¸»•şÿÿÿÿ
+l	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë²°»üÿÿÿÿ
+g	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®°Ñª
+l	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³áéâşÿÿÿÿ
+l	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯Ş‚üÿÿÿÿ
+>
+java:S1604S"(Make this anonymous inner class a lambda(ÓÙÑÛ
+>
+java:S1604Z"(Make this anonymous inner class a lambda(ééÔ«
+C
+java:S1604a"(Make this anonymous inner class a lambda(Ññ¡“şÿÿÿÿ
+>
+java:S1604h"(Make this anonymous inner class a lambda(Æ¸ÁÉ
+C
+java:S1604o"(Make this anonymous inner class a lambda(½İí·şÿÿÿÿ
+C
+java:S1604v"(Make this anonymous inner class a lambda(Èç¨ªûÿÿÿÿ
+>
+java:S1604}"(Make this anonymous inner class a lambda(·„ø»
+D
+java:S1604„"(Make this anonymous inner class a lambda(Ó¢µŒüÿÿÿÿ
+D
+java:S1604‹"(Make this anonymous inner class a lambda(ñĞˆÅøÿÿÿÿ
+D
+java:S1604’"(Make this anonymous inner class a lambda(•¯ôâúÿÿÿÿ
+?
+java:S1604™"(Make this anonymous inner class a lambda(ÍÁñÛ
+D
+java:S1604¤"(Make this anonymous inner class a lambda(‚ó¨øÿÿÿÿÿ
+?
+java:S1604Ù"(Make this anonymous inner class a lambda(ÓÙÑÛ
+?
+java:S1604à"(Make this anonymous inner class a lambda(ééÔ«
+D
+java:S1604ç"(Make this anonymous inner class a lambda(Ññ¡“şÿÿÿÿ
+?
+java:S1604î"(Make this anonymous inner class a lambda(Æ¸ÁÉ
+D
+java:S1604õ"(Make this anonymous inner class a lambda(½İí·şÿÿÿÿ
+D
+java:S1604ü"(Make this anonymous inner class a lambda(Èç¨ªûÿÿÿÿ
+?
+java:S1604ƒ"(Make this anonymous inner class a lambda(·„ø»
+D
+java:S1604Š"(Make this anonymous inner class a lambda(Ó¢µŒüÿÿÿÿ
+D
+java:S1604‘"(Make this anonymous inner class a lambda(ñĞˆÅøÿÿÿÿ
+D
+java:S1604˜"(Make this anonymous inner class a lambda(•¯ôâúÿÿÿÿ
+?
+java:S1604Ÿ"(Make this anonymous inner class a lambda(ÍÁñÛ
+D
+java:S1604©"(Make this anonymous inner class a lambda(‚ó¨øÿÿÿÿÿ
+?
+java:S1604×"(Make this anonymous inner class a lambda(ÓÙÑÛ
+?
+java:S1604Ş"(Make this anonymous inner class a lambda(ééÔ«
+D
+java:S1604å"(Make this anonymous inner class a lambda(Ññ¡“şÿÿÿÿ
+?
+java:S1604ì"(Make this anonymous inner class a lambda(Æ¸ÁÉ
+D
+java:S1604ó"(Make this anonymous inner class a lambda(½İí·şÿÿÿÿ
+D
+java:S1604ú"(Make this anonymous inner class a lambda(Èç¨ªûÿÿÿÿ
+?
+java:S1604"(Make this anonymous inner class a lambda(·„ø»
+D
+java:S1604ˆ"(Make this anonymous inner class a lambda(Ó¢µŒüÿÿÿÿ
+D
+java:S1604"(Make this anonymous inner class a lambda(ñĞˆÅøÿÿÿÿ
+D
+java:S1604–"(Make this anonymous inner class a lambda(•¯ôâúÿÿÿÿ
+?
+java:S1604"(Make this anonymous inner class a lambda(ÍÁñÛ
+D
+java:S1604§"(Make this anonymous inner class a lambda(‚ó¨øÿÿÿÿÿ
+Q
+java:S1161±":Add the "@Override" annotation above this method signature(ŸŒ¹Ñ

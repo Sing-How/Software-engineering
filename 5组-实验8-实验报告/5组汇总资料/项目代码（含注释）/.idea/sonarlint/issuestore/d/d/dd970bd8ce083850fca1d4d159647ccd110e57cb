@@ -1,0 +1,15 @@
+
+u
+java:S2293½"YReplace the type specification in this constructor call with the diamond operator ("<>").(áºÐ»ûÿÿÿÿ
+j
+java:S1192?"ODefine a constant instead of duplicating this literal "Wrong note id:" 3 times.(€¨ƒ¦úÿÿÿÿ
+O
+java:S2589ð"8Remove this expression which always evaluates to "false"(…Ùâ±
+\
+java:S1126}"AReplace this if-then-else statement by a single return statement.(Æ·¾ôúÿÿÿÿ
+i
+java:S3776µ"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(¤§²
+U
+java:S1155ì">Use isEmpty() to check whether the collection is empty or not.(”¥ŠÉ
+\
+java:S2147õ"ECombine this catch with the one at line 242, which has the same body.(æš©›
