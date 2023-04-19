@@ -1,0 +1,30 @@
+
+g
+java:S1301™"KReplace this "switch" statement by "if" statements to increase readability.(öÛ«°þÿÿÿÿ
+X
+java:S1874+"=Remove this use of "FLAG_SHOW_WHEN_LOCKED"; it is deprecated.(÷±µÁúÿÿÿÿ
+Q
+java:S18740";Remove this use of "FLAG_TURN_SCREEN_ON"; it is deprecated.(ƒìýè
+Z
+java:S18744"?Remove this use of "FLAG_LAYOUT_INSET_DECOR"; it is deprecated.(‹”‡Ñúÿÿÿÿ
+V	java:S125F"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ
+H
+java:S1874]"2Remove this use of "isScreenOn"; it is deprecated.(¤® ²
+O
+java:S1874g":Remove this use of "setAudioStreamType"; it is deprecated.(¡Ìé0
+U
+java:S1874i":Remove this use of "setAudioStreamType"; it is deprecated.(†Å¨ªùÿÿÿÿ
+`
+java:S2147z"ECombine this catch with the one at line 117, which has the same body.(ÿëÛßúÿÿÿÿ
+[
+java:S2147}"ECombine this catch with the one at line 122, which has the same body.(‚ùïÄ
+\
+java:S2147€"ECombine this catch with the one at line 125, which has the same body.(ï­£Ä
+M
+java:S1135v"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
+M
+java:S1135{"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
+M
+java:S1135~"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
+N
+java:S1135"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
