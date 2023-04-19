@@ -1,0 +1,37 @@
+
+o
+java:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(²¿›
+t
+java:S2293^"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘´ÂŞşÿÿÿÿ
+t
+java:S2293_"YReplace the type specification in this constructor call with the diamond operator ("<>").(±€šˆşÿÿÿÿ
+o
+java:S2293a"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÈüùÌ
+t
+java:S2293b"YReplace the type specification in this constructor call with the diamond operator ("<>").(ğˆâ³ùÿÿÿÿ
+t
+java:S2293c"YReplace the type specification in this constructor call with the diamond operator ("<>").(’»Ğıÿÿÿÿ
+]
+java:S1192©"FDefine a constant instead of duplicating this literal " DESC" 3 times.(©ÍÔ±
+K
+java:S1066ˆ"/Merge this if statement with the enclosing one.(¾¶†–şÿÿÿÿ
+K
+java:S1066Õ"/Merge this if statement with the enclosing one.(Ë¼Ö“ùÿÿÿÿ
+i
+java:S2259×"M"NullPointerException" will be thrown when invoking method "doContentSync()".(ÊÙãşüÿÿÿÿ
+i
+java:S2259Î"M"NullPointerException" will be thrown when invoking method "doContentSync()".(ÊÙãşüÿÿÿÿ
+S
+java:S2589‡"7Remove this expression which always evaluates to "true"(ë½ïûÿÿÿÿ
+i
+java:S3776«"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(«Ã¾á
+i
+java:S3776ú"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(ğúæŠ
+n
+java:S3776â"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(…Ë°±ıÿÿÿÿ
+n
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 34 to the 15 allowed.(ÿ»É¸ûÿÿÿÿ
+n
+java:S3776î"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Æ¶Ø üÿÿÿÿ
+G
+java:S1172î"+Remove this unused method parameter "node".(Æ¶Ø üÿÿÿÿ

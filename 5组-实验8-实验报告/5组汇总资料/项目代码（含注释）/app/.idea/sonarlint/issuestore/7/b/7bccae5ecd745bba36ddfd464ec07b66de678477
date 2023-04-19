@@ -1,0 +1,54 @@
+
+p
+java:S2293ƒ"YReplace the type specification in this constructor call with the diamond operator ("<>").(è‰¥ğ
+Z
+java:S6208‰"CMerge the previous cases into this one using comma-separated label.(«‹¥
+g
+java:S1301±"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ
+7
+java:S1116`"Remove this empty statement.(ôŸìúÿÿÿÿ
+a
+java:S1124‡"EReorder the modifiers to comply with the Java Language Specification.(¹úæµûÿÿÿÿ
+[
+java:S1124ˆ"EReorder the modifiers to comply with the Java Language Specification.(ìÑ¾k
+n
+java:S3776 "RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(áé–Şÿÿÿÿÿ
+2
+java:S3626±"Remove this redundant jump.(ûÁİ…
+2
+java:S3626µ"Remove this redundant jump.(ûÁİ…
+2
+java:S3626É"Remove this redundant jump.(ûÁİ…
+N
+java:S1135»"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+F
+java:S2093¥"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+o
+java:S1450í"XRemove the "mMoveMenu" field and declare it as a local variable in the relevant methods.(¢—ò
+N
+java:S1135¢"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+N
+java:S1135§"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+8
+java:S1116™"Remove this empty statement.(ôŸìúÿÿÿÿ
+i
+java:S3776Ø"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ãìîí
+?	java:S108ß")Either remove or fill this block of code.(ûÊ¥
+h
+java:S3776Æ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÅôÉ#
+N
+java:S1135ˆ"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+^
+java:S1126"BReplace this if-then-else statement by a single method invocation.(ç’¦ıÿÿÿÿ
+N
+java:S1135•"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+h
+java:S3776ñ"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ôŒùb
+G
+java:S3398˜"0Move this method into "OnListItemClickListener".(‘ğğ¡
+<
+java:S3398Ø"%Move this method into "ModeCallback".(ãìîí
+A
+java:S3398˜"%Move this method into "ModeCallback".(“ğÉçıÿÿÿÿ
+K
+java:S3398¼"/Move this method into "BackgroundQueryHandler".(—÷õüÿÿÿÿ
