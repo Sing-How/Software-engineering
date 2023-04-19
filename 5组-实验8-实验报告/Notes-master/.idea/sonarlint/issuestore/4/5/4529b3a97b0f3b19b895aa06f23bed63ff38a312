@@ -1,0 +1,19 @@
+
+u
+java:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(æå„şÿÿÿÿ
+a
+java:S2184s"FCast one of the operands of this multiplication operation to a "long".(â£›Úùÿÿÿÿ
+c
+java:S2095·"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(øÆˆ€
+H
+java:S1874ç"2Remove this use of "HttpParams"; it is deprecated.(ŸÅ‹E
+X
+java:S1874è"<Remove this use of "HttpConnectionParams"; it is deprecated.(­Ú¬Ùùÿÿÿÿ
+X
+java:S1874è"<Remove this use of "setConnectionTimeout"; it is deprecated.(­Ú¬Ùùÿÿÿÿ
+X
+java:S1874é"<Remove this use of "HttpConnectionParams"; it is deprecated.(åÙµÌûÿÿÿÿ
+P
+java:S1874é"4Remove this use of "setSoTimeout"; it is deprecated.(åÙµÌûÿÿÿÿ
+F
+java:S2093µ"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
