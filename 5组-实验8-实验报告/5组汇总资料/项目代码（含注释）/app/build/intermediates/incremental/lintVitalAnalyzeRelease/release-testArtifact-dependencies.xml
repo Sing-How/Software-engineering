@@ -1,8 +1,0 @@
-<dependencies>
-  <compile
-      roots="D:\AndroidProjection\Notes@@:app::release">
-    <dependency
-        name="D:\AndroidProjection\Notes@@:app::release"
-        simpleName=":"/>
-  </compile>
-</dependencies>

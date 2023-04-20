@@ -1,0 +1,19 @@
+
+â
+java:S1598"ÆThis file "BackupUtils.java" should be located in "net\micode\notes\tool" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5ç»„-å®éªŒ5-å®éªŒæŠ¥å‘Š\å·¥ä½œè¿›åº¦\notes\tool".(ƒæ†àùÿÿÿÿ
+e
+java:S2095«"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ŠÀø¯
+k	java:S116w"VRename this field "TEXT_FORMAT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ›–¼
+i
+java:S3776¨"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(œÃÁí
+h
+java:S3776İ"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ì´ê
+\
+java:S2147°"ECombine this catch with the one at line 301, which has the same body.(ßÈ´
+\
+java:S2147Ğ"ECombine this catch with the one at line 334, which has the same body.(ï­£Ä
+]	java:S899Ë"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ
+?
+java:S3398»"#Move this method into "TextExport".(¨ä¿ÿıÿÿÿÿ
+9
+java:S3398H"#Move this method into "TextExport".(…´‹

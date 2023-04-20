@@ -1,0 +1,25 @@
+
+t
+java:S22932"YReplace the type specification in this constructor call with the diamond operator ("<>").(áºÐ»ûÿÿÿÿ
+t
+java:S2293Z"YReplace the type specification in this constructor call with the diamond operator ("<>").(áºÐ»ûÿÿÿÿ
+u
+java:S2293Ò"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÛÂª¡úÿÿÿÿ
+b
+java:S1192D"GDefine a constant instead of duplicating this literal "%s: %s" 4 times.(ÇÇ÷«ùÿÿÿÿ
+c
+java:S1192x"HDefine a constant instead of duplicating this literal "=? AND " 4 times.(„¼¹úÿÿÿÿ
+J
+java:S1066~"/Merge this if statement with the enclosing one.(ä²œ¼øÿÿÿÿ
+v
+java:S1319("`The type of "ids" should be an interface such as "Set" rather than the implementation "HashSet".(îîè“
+{
+java:S1319S"`The type of "ids" should be an interface such as "Set" rather than the implementation "HashSet".(ó†±‹ÿÿÿÿÿ
+‰
+java:S1319È"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(ÛëÈðýÿÿÿÿ
+à
+java:S1598"ÄThis file "DataUtils.java" should be located in "net\micode\notes\tool" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5ç»„-å®žéªŒ5-å®žéªŒæŠ¥å‘Š\å·¥ä½œè¿›åº¦\notes\tool".(ƒæ†àùÿÿÿÿ
+U
+java:S1118&":Add a private constructor to hide the implicit public one.(³¡¸ÿÿÿÿÿ
+T
+java:S1155-">Use isEmpty() to check whether the collection is empty or not.(´¤”Ó

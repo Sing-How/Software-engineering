@@ -1,12 +1,0 @@
-
-F
-java:S1066Ö"/Merge this if statement with the enclosing one.(â®¾
-k	java:S116C"VRename this field "if_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÷¹£
-3
-java:S2386H"Make this member "protected".(”µåÓ
-8
-java:S2386R"Make this member "protected".(Ñã³ıÿÿÿÿ
-X
-java:S1126ñ"AReplace this if-then-else statement by a single return statement.(¶ø ˜
-?
-java:S1125×"(Remove the unnecessary boolean literals.(ÍÛì•

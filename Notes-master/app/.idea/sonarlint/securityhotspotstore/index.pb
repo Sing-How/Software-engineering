@@ -1,6 +1,4 @@
 
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 V
 &src/main/res/values-zh-rTW/strings.xml,a\2\a289a25c2ff47a08e20a7961ccfb86578a643b7c
 U
@@ -169,3 +167,5 @@ N
 src/main/res/values/styles.xml,0\b\0b522f7cf7fdd4fc17fb1204d49cb13f730bfff8
 R
 "src/main/res/drawable/new_note.xml,c\6\c676839249b2a4bbc2de581ad437e7c81b55b48d
+M
+Notes-master/app/build.gradle,3\f\3f59bafa65e54f504469c37bcd4ab1cc732cc28d
