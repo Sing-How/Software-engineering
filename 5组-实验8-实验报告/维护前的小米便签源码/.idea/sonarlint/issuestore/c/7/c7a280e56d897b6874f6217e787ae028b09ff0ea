@@ -21,7 +21,7 @@ java:S1192U"HDefine a constant instead of duplicating this literal "   SET " 8 
 java:S1192T"JDefine a constant instead of duplicating this literal "  UPDATE " 8 times.(ìó¥Ä
 
 java:S1192("yDefine a constant instead of duplicating this literal " INTEGER NOT NULL DEFAULT (strftime('%s','now') * 1000)," 4 times.(˜›£·
-ä
-java:S1598"ÎThis file "NotesDatabaseHelper.java" should be located in "net\micode\notes\data" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5ç»„-å®éªŒ6-å®éªŒæŠ¥å‘Š\å·¥ä½œè¿›åº¦\notes\data".(ŸÙñM
+ğ
+java:S1598"ÚThis file "NotesDatabaseHelper.java" should be located in "net\micode\notes\data" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5ç»„-å®éªŒ8-å®éªŒæŠ¥å‘Š\ç»´æŠ¤å‰çš„å°ç±³ä¾¿ç­¾æºç \data".(ŸÙñM
 Y
 java:S1214"CMove constants defined in this interfaces to another class or enum.(áÅÔö

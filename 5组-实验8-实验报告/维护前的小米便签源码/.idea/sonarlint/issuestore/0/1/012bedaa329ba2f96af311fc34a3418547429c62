@@ -1,8 +1,8 @@
 
 g
 java:S1301™"KReplace this "switch" statement by "if" statements to increase readability.(öÛ«°şÿÿÿÿ
-à
-java:S1598"ÉThis file "AlarmAlertActivity.java" should be located in "net\micode\notes\ui" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5ç»„-å®éªŒ6-å®éªŒæŠ¥å‘Š\å·¥ä½œè¿›åº¦\notes\ui".(³‘‰¼
+ì
+java:S1598"ÕThis file "AlarmAlertActivity.java" should be located in "net\micode\notes\ui" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5ç»„-å®éªŒ8-å®éªŒæŠ¥å‘Š\ç»´æŠ¤å‰çš„å°ç±³ä¾¿ç­¾æºç \ui".(³‘‰¼
 V	java:S125F"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ
 `
 java:S2147z"ECombine this catch with the one at line 117, which has the same body.(ÿëÛßúÿÿÿÿ

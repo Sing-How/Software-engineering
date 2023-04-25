@@ -3,8 +3,8 @@ u
 java:S2293μ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ζε„ώÿÿÿÿ
 a
 java:S2184n"FCast one of the operands of this multiplication operation to a "long".(β£›Ϊωÿÿÿÿ
-ν
-java:S1598"ΦThis file "GTaskClient.java" should be located in "net\micode\notes\gtask\remote" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5η»„-ε®ιª6-ε®ιªζ¥ε‘\ε·¥δ½θΏ›εΊ¦\notes\gtask\remote".(¶ΞϋΔ
+ω
+java:S1598"βThis file "GTaskClient.java" should be located in "net\micode\notes\gtask\remote" directory, not in "D:\0_studying_material\0_SE\git\Sofetware-engineering\5η»„-ε®ιª8-ε®ιªζ¥ε‘\η»΄ζ¤ε‰η„ε°η±³δΎΏη­ΎζΊη \gtask\remote".(¶ΞϋΔ
 c
 java:S2095Σ"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ψΖ€
 F
